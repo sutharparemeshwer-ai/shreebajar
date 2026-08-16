@@ -61,23 +61,25 @@ const Dropdown = ({ label, options, value, onChange }) => {
   );
 };
 
-/* ─── FAQ Accordion Item ───────────────────────── */
+/* ─── FAQ Accordion Item (Ultra Smooth Grid Transition) ─── */
 const FaqItem = ({ q, a, index, openIndex, setOpen }) => {
   const isOpen = openIndex === index;
   return (
-    <div className={`rounded-2xl border transition-all duration-200 overflow-hidden ${isOpen ? 'border-indigo-200 shadow-sm' : 'border-slate-200'}`}>
+    <div className={`rounded-2xl border transition-all duration-300 overflow-hidden ${isOpen ? 'border-indigo-200 shadow-sm bg-indigo-50/20' : 'border-slate-200 bg-white'}`}>
       <button
         onClick={() => setOpen(isOpen ? null : index)}
         className="w-full px-6 py-5 text-left flex items-center justify-between gap-4 cursor-pointer"
       >
-        <span className={`text-sm font-bold transition-colors ${isOpen ? 'text-indigo-700' : 'text-slate-900'}`}>{q}</span>
-        <ChevronDown className={`w-4 h-4 shrink-0 transition-transform duration-200 ${isOpen ? 'rotate-180 text-indigo-600' : 'text-slate-400'}`} />
+        <span className={`text-sm font-bold transition-colors duration-200 ${isOpen ? 'text-indigo-700' : 'text-slate-900'}`}>{q}</span>
+        <ChevronDown className={`w-4 h-4 shrink-0 transition-transform duration-300 ease-in-out ${isOpen ? 'rotate-180 text-indigo-600' : 'text-slate-400'}`} />
       </button>
-      {isOpen && (
-        <div className="px-6 pb-5 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-4">
-          {a}
+      <div className={`grid transition-all duration-300 ease-in-out ${isOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}>
+        <div className="overflow-hidden">
+          <div className="px-6 pb-5 text-sm text-slate-600 leading-relaxed border-t border-slate-100/80 pt-4">
+            {a}
+          </div>
         </div>
-      )}
+      </div>
     </div>
   );
 };
@@ -220,7 +222,7 @@ const Contact = () => {
             {contactChannels.map((ch, i) => {
               const Icon = ch.icon;
               const content = (
-                <div className={`bg-white rounded-2xl border border-slate-200 p-5 hover:border-slate-300 hover:shadow-md transition-all flex items-start gap-3 ${ch.href ? 'cursor-pointer group' : ''}`}>
+                <div className="bg-white rounded-2xl border border-slate-200 p-5 hover:border-slate-300 hover:shadow-md transition-all flex items-start gap-3 cursor-pointer group">
                   <div className={`w-10 h-10 rounded-xl border flex items-center justify-center shrink-0 ${ch.accent}`}>
                     <Icon className="w-4 h-4" />
                   </div>
