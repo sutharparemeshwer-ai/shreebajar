@@ -568,8 +568,8 @@ const About = () => {
               })}
             </div>
 
-            {/* goals.svg illustration */}
-            <div className="lg:col-span-5 flex items-center justify-center">
+            {/* goals.svg illustration (Desktop only) */}
+            <div className="hidden lg:flex lg:col-span-5 items-center justify-center">
               <div className="w-full max-w-md bg-slate-50/70 p-6 rounded-3xl border border-slate-100">
                 <img
                   src="/goals.svg"

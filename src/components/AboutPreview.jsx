@@ -72,8 +72,8 @@ const AboutPreview = () => {
             </div>
           </div>
 
-          {/* RIGHT COLUMN: aboutgr.svg Illustration */}
-          <div className="lg:col-span-6 flex items-center justify-center lg:justify-end">
+          {/* RIGHT COLUMN: aboutgr.svg Illustration (Desktop only) */}
+          <div className="hidden lg:flex lg:col-span-6 items-center justify-center lg:justify-end">
             <div className="w-full max-w-lg">
               <img
                 src="/aboutgr.svg"
