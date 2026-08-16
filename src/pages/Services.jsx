@@ -396,8 +396,8 @@ const Services = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {process.map((p, i) => (
               <div key={i} className="relative bg-white rounded-2xl border border-slate-200 p-7 hover:border-slate-300 hover:shadow-md transition-all group text-left">
-                {/* Step number */}
-                <div className="text-4xl font-extrabold text-slate-100 mb-4 group-hover:text-indigo-100 transition-colors select-none">
+                {/* Step number badge */}
+                <div className="w-10 h-10 rounded-xl bg-indigo-50 border border-indigo-100 text-indigo-600 text-sm font-extrabold flex items-center justify-center mb-4 group-hover:bg-indigo-600 group-hover:text-white transition-all">
                   {p.step}
                 </div>
                 {/* Connector line */}
