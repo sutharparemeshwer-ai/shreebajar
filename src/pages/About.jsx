@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import DottedCanvas from '../components/DottedCanvas';
+import AnimatedCounter from '../components/AnimatedCounter';
 import {
   ArrowRight,
   Check,
@@ -376,10 +377,10 @@ const About = () => {
   ];
 
   const stats = [
-    { value: '350+',    label: 'Shoots Delivered',   sub: 'Weddings & Brands' },
-    { value: 'Rs10Cr+', label: 'Ad Revenue Managed', sub: 'Meta & Google Ads' },
-    { value: '150+',    label: 'Web Dev Projects',   sub: 'Custom Engineering' },
-    { value: '4.9★',    label: 'Client Rating',      sub: 'Verified Reviews' },
+    { target: 350, suffix: '+', label: 'Shoots Delivered', sub: 'Weddings & Brands' },
+    { target: 10, prefix: '₹', suffix: 'Cr+', label: 'Ad Revenue Managed', sub: 'Meta & Google Ads' },
+    { target: 150, suffix: '+', label: 'Web Dev Projects', sub: 'Custom Engineering' },
+    { target: 4.9, suffix: '★', decimals: 1, label: 'Client Rating', sub: 'Verified Reviews' },
   ];
 
   return (
@@ -432,7 +433,9 @@ const About = () => {
               <div className="grid grid-cols-2 gap-3">
                 {stats.map((s, i) => (
                   <div key={i} className="bg-white rounded-2xl border border-slate-200 p-5 shadow-sm hover:shadow-md hover:border-slate-300 transition-all">
-                    <div className="text-2xl font-extrabold text-slate-900">{s.value}</div>
+                    <div className="text-2xl font-extrabold text-slate-900">
+                      <AnimatedCounter target={s.target} prefix={s.prefix || ''} suffix={s.suffix || ''} decimals={s.decimals || 0} />
+                    </div>
                     <div className="text-xs font-bold text-slate-800 mt-0.5">{s.label}</div>
                     <div className="text-[11px] text-slate-400 mt-0.5">{s.sub}</div>
                   </div>

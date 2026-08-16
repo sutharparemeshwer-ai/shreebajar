@@ -6,6 +6,7 @@ import ServicesPreview from '../components/ServicesPreview';
 import AboutPreview from '../components/AboutPreview';
 import TestimonialsPreview from '../components/TestimonialsPreview';
 import ContactPreview from '../components/ContactPreview';
+import AnimatedCounter from '../components/AnimatedCounter';
 import {
   ArrowRight,
   Trophy,
@@ -28,10 +29,10 @@ const Home = () => {
   };
 
   const agencyStats = [
-    { label: 'Shoots Delivered', value: '350+', sub: 'Weddings & Brands' },
-    { label: 'Ad Sales Generated', value: '₹10Cr+', sub: 'Meta & Google Ads' },
-    { label: 'Web & App Projects', value: '150+', sub: 'Custom Engineering' },
-    { label: 'Client Satisfaction', value: '99.7%', sub: 'Verified Rating' }
+    { label: 'Shoots Delivered', target: 350, suffix: '+', sub: 'Weddings & Brands' },
+    { label: 'Ad Sales Generated', target: 10, prefix: '₹', suffix: 'Cr+', sub: 'Meta & Google Ads' },
+    { label: 'Web & App Projects', target: 150, suffix: '+', sub: 'Custom Engineering' },
+    { label: 'Client Satisfaction', target: 99.7, decimals: 1, suffix: '%', sub: 'Verified Rating' }
   ];
 
   return (
@@ -190,7 +191,14 @@ const Home = () => {
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {agencyStats.map((st, idx) => (
             <div key={idx} className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:border-slate-300 transition-all text-left space-y-1">
-              <div className="text-3xl font-extrabold text-slate-900">{st.value}</div>
+              <div className="text-3xl font-extrabold text-slate-900">
+                <AnimatedCounter
+                  target={st.target}
+                  prefix={st.prefix || ''}
+                  suffix={st.suffix || ''}
+                  decimals={st.decimals || 0}
+                />
+              </div>
               <div className="text-xs font-bold text-slate-800">{st.label}</div>
               <div className="text-[11px] text-slate-500">{st.sub}</div>
             </div>

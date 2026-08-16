@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import DottedCanvas from '../components/DottedCanvas';
+import AnimatedCounter from '../components/AnimatedCounter';
 import {
   Camera,
   Megaphone,
@@ -321,13 +322,15 @@ const Services = () => {
           {/* RIGHT — quick stat pills */}
           <div className="lg:col-span-5 grid grid-cols-2 gap-3">
             {[
-              { val: '9+',     label: 'Services Offered',      sub: 'All under one roof',    color: 'text-indigo-600' },
-              { val: '₹10Cr+', label: 'Ad Revenue Managed',    sub: 'Meta & Google',          color: 'text-emerald-600' },
-              { val: '350+',   label: 'Shoots Delivered',      sub: 'Weddings & Brands',      color: 'text-violet-600' },
-              { val: '4.9★',   label: 'Client Satisfaction',   sub: 'Verified reviews',       color: 'text-amber-600' },
+              { target: 9,    suffix: '+',   label: 'Services Offered',    sub: 'All under one roof',  color: 'text-indigo-600' },
+              { target: 10,   prefix: '₹', suffix: 'Cr+', label: 'Ad Revenue Managed',  sub: 'Meta & Google',        color: 'text-emerald-600' },
+              { target: 350,  suffix: '+',   label: 'Shoots Delivered',    sub: 'Weddings & Brands',    color: 'text-violet-600' },
+              { target: 4.9,  suffix: '★', decimals: 1, label: 'Client Satisfaction', sub: 'Verified reviews', color: 'text-amber-600' },
             ].map((s, i) => (
               <div key={i} className="bg-white rounded-2xl border border-slate-200 p-5 shadow-sm hover:shadow-md hover:border-slate-300 transition-all">
-                <div className={`text-2xl font-extrabold ${s.color}`}>{s.val}</div>
+                <div className={`text-2xl font-extrabold ${s.color}`}>
+                  <AnimatedCounter target={s.target} prefix={s.prefix || ''} suffix={s.suffix || ''} decimals={s.decimals || 0} />
+                </div>
                 <div className="text-xs font-bold text-slate-800 mt-0.5">{s.label}</div>
                 <div className="text-[11px] text-slate-400 mt-0.5">{s.sub}</div>
               </div>
