@@ -74,6 +74,14 @@ const teamMembers = [
 
 const TeamAccordion = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   const handlePrev = () => {
     setActiveIndex((prev) => (prev - 1 + teamMembers.length) % teamMembers.length);
@@ -93,11 +101,12 @@ const TeamAccordion = () => {
   }, []);
 
   return (
-    <div className="relative w-full rounded-3xl overflow-hidden border border-slate-200 shadow-xl"
-      style={{ height: '520px' }}>
-
+    <div
+      className="relative w-full rounded-3xl overflow-hidden border border-slate-200 shadow-xl transition-all duration-300"
+      style={{ height: isMobile ? '600px' : '520px' }}
+    >
       {/* Slides */}
-      <div style={{ display: 'flex', height: '100%', position: 'relative' }}>
+      <div style={{ display: 'flex', flexDirection: isMobile ? 'column' : 'row', height: '100%', position: 'relative' }}>
         {teamMembers.map((member, i) => {
           const isActive = i === activeIndex;
           return (
@@ -105,15 +114,15 @@ const TeamAccordion = () => {
               key={i}
               onClick={() => setActiveIndex(i)}
               style={{
-                flex: isActive ? '1.6' : '1',
+                flex: isActive ? (isMobile ? '3.5' : '1.6') : '1',
                 backgroundImage: `url('${member.photo}')`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center top',
-                transition: 'flex 0.8s cubic-bezier(0.4, 0, 0.2, 1)',
+                transition: 'flex 0.6s cubic-bezier(0.4, 0, 0.2, 1)',
                 position: 'relative',
                 cursor: 'pointer',
                 overflow: 'hidden',
-                filter: isActive ? 'grayscale(0)' : 'grayscale(0.7)',
+                filter: isActive ? 'grayscale(0)' : 'grayscale(0.6)',
               }}
             >
               {/* Dark gradient overlay */}
@@ -121,11 +130,11 @@ const TeamAccordion = () => {
                 position: 'absolute', inset: 0,
                 background: isActive
                   ? 'linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.75) 60%, rgba(0,0,0,0.92) 100%)'
-                  : 'linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.85) 100%)',
+                  : 'linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.85) 100%)',
                 transition: 'background 0.6s ease',
               }} />
 
-              {/* Accent color bar at bottom */}
+              {/* Accent color bar */}
               <div style={{
                 position: 'absolute', bottom: 0, left: 0, right: 0, height: '3px',
                 background: member.accentColor,
@@ -133,43 +142,45 @@ const TeamAccordion = () => {
                 transition: 'opacity 0.4s ease 0.4s',
               }} />
 
-              {/* NUMBER — top-left */}
+              {/* NUMBER */}
               <div style={{
                 position: 'absolute',
-                top: '24px', left: '24px',
-                fontSize: isActive ? '42px' : '32px',
+                top: isMobile ? '12px' : '24px',
+                left: isMobile ? '16px' : '24px',
+                fontSize: isActive ? (isMobile ? '28px' : '42px') : (isMobile ? '22px' : '32px'),
                 fontWeight: '300',
-                color: 'rgba(255,255,255,0.5)',
+                color: 'rgba(255,255,255,0.6)',
                 lineHeight: 1,
                 transition: 'all 0.6s ease',
-                fontFamily: 'inherit',
               }}>
                 {member.number}
               </div>
 
-              {/* COLLAPSED: rotated name */}
+              {/* COLLAPSED label */}
               {!isActive && (
                 <div style={{
                   position: 'absolute',
-                  bottom: '80px',
-                  left: '18px',
-                  color: 'rgba(255,255,255,0.9)',
-                  fontSize: '13px',
+                  bottom: isMobile ? '14px' : '80px',
+                  left: isMobile ? '60px' : '18px',
+                  color: 'rgba(255,255,255,0.95)',
+                  fontSize: isMobile ? '12px' : '13px',
                   fontWeight: '700',
                   whiteSpace: 'nowrap',
-                  transform: 'rotate(-90deg)',
-                  transformOrigin: 'left bottom',
+                  transform: isMobile ? 'none' : 'rotate(-90deg)',
+                  transformOrigin: isMobile ? 'unset' : 'left bottom',
                   letterSpacing: '0.05em',
                   transition: 'all 0.5s ease',
                 }}>
-                  {member.name}
+                  {member.name} — <span style={{ color: 'rgba(255,255,255,0.7)', fontWeight: '500' }}>{member.role}</span>
                 </div>
               )}
 
               {/* CONTENT BLOCK — bottom */}
               <div style={{
                 position: 'absolute',
-                bottom: '28px', left: '28px', right: '28px',
+                bottom: isMobile ? '14px' : '28px',
+                left: isMobile ? '16px' : '28px',
+                right: isMobile ? '16px' : '28px',
                 color: 'white',
                 zIndex: 2,
                 opacity: isActive ? 1 : 0,
