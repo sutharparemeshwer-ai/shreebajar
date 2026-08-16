@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-pure: #ffffff;
+    --text-main: #0f172a;
+    --text-muted: #475569;
+    --border-light: #e2e8f0;
+    --accent-indigo: #4f46e5;
+  }
+
+  body {
+    background-color: var(--bg-pure);
+    color: var(--text-main);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+}
+
+/* Dancing Dot Keyframes */
+@keyframes danceDots {
+  0% {
+    background-position: 0px 0px;
+  }
+  50% {
+    background-position: 14px 10px;
+  }
+  100% {
+    background-position: 0px 0px;
+  }
+}
+
+/* Custom Dotted Background - Larger Dots + Dancing Wave Animation */
+.hero-dotted-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 650px;
+  background-image: radial-gradient(#64748b 2.2px, transparent 2.2px);
+  background-size: 28px 28px;
+  opacity: 0.55;
+  animation: danceDots 8s ease-in-out infinite;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.45) 45%, rgba(0, 0, 0, 0) 100%);
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.45) 45%, rgba(0, 0, 0, 0) 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Minimalist Clean Shadow & Panel Utilities */
+.panel-minimal {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.04), 0 1px 2px -1px rgba(0, 0, 0, 0.02);
+}
+
+.panel-minimal-hover {
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.panel-minimal-hover:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.06), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
+  transform: translateY(-2px);
+}
+
+/* Crisp Clean Text Gradient */
+.text-gradient-dark {
+  background: linear-gradient(135deg, #0f172a 0%, #334155 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-indigo {
+  background: linear-gradient(135deg, #4f46e5 0%, #2563eb 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
