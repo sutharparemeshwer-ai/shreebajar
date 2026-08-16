@@ -50,7 +50,7 @@ const Interactive3DGlobe = ({ height = '400px' }) => {
       { lat: 28.6139, lon: 77.209, name: 'Delhi NCR Hub' },
       { lat: 19.076, lon: 72.8777, name: 'Mumbai Commercial Center' },
       { lat: 12.9716, lon: 77.5946, name: 'Bengaluru Tech HQ' },
-      { lat: 22.5726, lon: 88.3639, name: 'Kolkata Regional Bajar' },
+      { lat: 22.5726, lon: 88.3639, name: 'Kolkata Regional Bazaar' },
       { lat: 13.0827, lon: 80.2707, name: 'Chennai Express Hub' },
       { lat: 23.0225, lon: 72.5714, name: 'Ahmedabad Textile Center' },
       { lat: 25.3176, lon: 82.9739, name: 'Varanasi Silk Cluster' },
@@ -170,7 +170,7 @@ const Interactive3DGlobe = ({ height = '400px' }) => {
     <div className="relative w-full rounded-2xl glass-panel p-2 overflow-hidden flex flex-col items-center justify-center">
       <div className="absolute top-4 left-4 bg-slate-900/80 backdrop-blur-md px-3 py-1.5 rounded-full border border-emerald-500/30 text-xs text-emerald-400 font-medium z-10 flex items-center gap-2">
         <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
-        Interactive 3D Bajar Network Globe (Drag to Rotate)
+        Interactive 3D Bazaar Network Globe (Drag to Rotate)
       </div>
       <div ref={containerRef} style={{ height }} className="w-full cursor-grab active:cursor-grabbing" />
     </div>

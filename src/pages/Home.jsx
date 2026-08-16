@@ -49,7 +49,7 @@ const Home = () => {
 
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-slate-100/90 border border-slate-200 text-slate-800 text-xs font-semibold uppercase tracking-wider backdrop-blur-sm">
               <span className="w-2 h-2 rounded-full bg-indigo-600"></span>
-              <span>Shree Bajar Media & Marketing Agency</span>
+              <span>Shree Bazaar Media & Marketing Agency</span>
             </div>
 
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-slate-900 leading-[1.08]">
@@ -113,12 +113,12 @@ const Home = () => {
                   <div className="space-y-2.5 pt-1 text-left">
                     <div className="flex items-center justify-between text-[11px] text-slate-400 border-b border-slate-800 pb-2">
                       <span className="font-bold text-blue-400 flex items-center gap-1">
-                        <Sparkle className="w-3 h-3 text-amber-400 fill-amber-400" /> Shree Bajar Studio
+                        <Sparkle className="w-3 h-3 text-amber-400 fill-amber-400" /> Shree Bazaar Studio
                       </span>
                       <span>Live</span>
                     </div>
                     <div className="bg-slate-900 p-2.5 rounded-xl border border-slate-800">
-                      <p className="text-[10px] text-slate-300">Welcome to Shree Bajar! Ready to launch your wedding shoot & Meta ad campaign?</p>
+                      <p className="text-[10px] text-slate-300">Welcome to Shree Bazaar! Ready to launch your wedding shoot & Meta ad campaign?</p>
                     </div>
                     <div className="bg-indigo-600 p-2.5 rounded-xl text-white text-[10px] font-medium ml-3 shadow-md">
                       Yes! Book the wedding shoot & launch Meta Ads!

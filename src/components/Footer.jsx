@@ -70,7 +70,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="space-y-5 lg:col-span-1">
             <Link to="/" className="inline-block text-2xl font-extrabold tracking-tight text-white">
-              SHREE <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">BAJAR</span>
+              SHREE <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">BAZAAR</span>
             </Link>
 
             <p className="text-sm text-slate-400 leading-relaxed">
@@ -170,13 +170,13 @@ const Footer = () => {
               </li>
 
               <li>
-                <a href="mailto:hello@shreebajar.com" className="flex items-start gap-3 group cursor-pointer">
+                <a href="mailto:hello@shreebazaar.com" className="flex items-start gap-3 group cursor-pointer">
                   <div className="w-8 h-8 rounded-lg bg-blue-600/20 border border-blue-500/20 flex items-center justify-center shrink-0 group-hover:bg-blue-600 transition-all">
                     <Mail className="w-3.5 h-3.5 text-blue-400 group-hover:text-white transition-colors" />
                   </div>
                   <div>
                     <div className="text-[10px] uppercase tracking-wider text-slate-500 mb-0.5">Email</div>
-                    <div className="text-sm font-semibold text-slate-300 group-hover:text-blue-400 transition-colors">hello@shreebajar.com</div>
+                    <div className="text-sm font-semibold text-slate-300 group-hover:text-blue-400 transition-colors">hello@shreebazaar.com</div>
                   </div>
                 </a>
               </li>
@@ -201,7 +201,7 @@ const Footer = () => {
       {/* ── BOTTOM STRIP ───────────────────────────────────────── */}
       <div className="relative z-10 border-t border-white/[0.06]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <span className="text-xs text-slate-600">© {year} Shree Bajar Media & Marketing. All rights reserved.</span>
+          <span className="text-xs text-slate-600">© {year} Shree Bazaar Media & Marketing. All rights reserved.</span>
           <div className="flex items-center gap-5 text-xs text-slate-600">
             <a href="#" className="hover:text-slate-300 transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-slate-300 transition-colors">Terms of Service</a>

@@ -39,7 +39,7 @@ const Navbar = () => {
           </div>
           <div className="flex items-baseline gap-1.5">
             <span className="text-lg font-extrabold tracking-tight text-slate-900">
-              SHREE BAJAR
+              SHREE BAZAAR
             </span>
             <span className="w-1.5 h-1.5 rounded-full bg-indigo-600" />
           </div>

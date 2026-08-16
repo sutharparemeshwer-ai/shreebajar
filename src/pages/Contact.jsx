@@ -123,9 +123,9 @@ const Contact = () => {
     {
       icon: Mail,
       title: 'Email Us',
-      value: 'hello@shreebajar.com',
+      value: 'hello@shreebazaar.com',
       sub: 'Reply within 30 minutes',
-      href: 'mailto:hello@shreebajar.com',
+      href: 'mailto:hello@shreebazaar.com',
       accent: 'bg-blue-50 text-blue-600 border-blue-100',
     },
     {
@@ -397,7 +397,7 @@ const Contact = () => {
                   <span className="text-xs text-slate-400 ml-1">4.9 / 5.0</span>
                 </div>
                 <p className="text-xs text-slate-400 leading-relaxed italic mb-3">
-                  "Shree Bajar completely transformed our brand — stunning wedding film, killer Meta ads, and a website that actually converts. Best decision we made."
+                  "Shree Bazaar completely transformed our brand — stunning wedding film, killer Meta ads, and a website that actually converts. Best decision we made."
                 </p>
                 <div className="flex items-center gap-2">
                   <div className="w-7 h-7 rounded-full bg-indigo-600 flex items-center justify-center text-[10px] font-bold text-white">RK</div>
@@ -438,7 +438,7 @@ const Contact = () => {
           <div className="mt-12 text-center">
             <p className="text-slate-500 text-sm">
               Still have questions?{' '}
-              <a href="mailto:hello@shreebajar.com" className="text-indigo-600 font-bold hover:underline">
+              <a href="mailto:hello@shreebazaar.com" className="text-indigo-600 font-bold hover:underline">
                 Email us directly
               </a>{' '}
               or{' '}
