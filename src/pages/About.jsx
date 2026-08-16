@@ -532,26 +532,41 @@ const About = () => {
       {/* ══ OUR GOALS ════════════════════════════════════════════════ */}
       <section className="relative z-10 bg-white border-t border-slate-100 py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="mb-12">
+          <div className="mb-12 text-left">
             <span className="text-xs font-bold text-indigo-600 uppercase tracking-widest block mb-2">Our Goals</span>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-2">Where We're Headed</h2>
             <p className="text-slate-500 text-sm max-w-lg">Ambitious targets, clear roadmap, and an unstoppable team driving every milestone.</p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-            {goals.map((g, i) => {
-              const Icon = g.icon;
-              return (
-                <div key={i} className="flex items-start gap-5 p-7 rounded-2xl border border-slate-200 bg-white hover:border-slate-300 hover:shadow-md transition-all group text-left">
-                  <div className={`w-11 h-11 rounded-xl flex items-center justify-center shrink-0 ${g.accent} group-hover:scale-110 transition-transform`}>
-                    <Icon className="w-5 h-5" />
+
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            {/* Goal cards */}
+            <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {goals.map((g, i) => {
+                const Icon = g.icon;
+                return (
+                  <div key={i} className="flex items-start gap-4 p-6 rounded-2xl border border-slate-200 bg-white hover:border-slate-300 hover:shadow-md transition-all group text-left">
+                    <div className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 ${g.accent} group-hover:scale-110 transition-transform`}>
+                      <Icon className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <h4 className="text-sm font-extrabold text-slate-900 mb-1 group-hover:text-indigo-700 transition-colors">{g.title}</h4>
+                      <p className="text-xs text-slate-500 leading-relaxed">{g.desc}</p>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="text-sm font-extrabold text-slate-900 mb-1.5 group-hover:text-indigo-700 transition-colors">{g.title}</h4>
-                    <p className="text-xs text-slate-500 leading-relaxed">{g.desc}</p>
-                  </div>
-                </div>
-              );
-            })}
+                );
+              })}
+            </div>
+
+            {/* goals.svg illustration */}
+            <div className="lg:col-span-5 flex items-center justify-center">
+              <div className="w-full max-w-md bg-slate-50/70 p-6 rounded-3xl border border-slate-100">
+                <img
+                  src="/goals.svg"
+                  alt="Shree Bazaar Goals Illustration"
+                  className="w-full h-auto object-contain drop-shadow-sm"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
