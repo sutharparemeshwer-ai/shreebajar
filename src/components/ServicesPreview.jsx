@@ -81,7 +81,7 @@ const ServicesPreview = () => {
             return (
               <div
                 key={service.id}
-                className="bg-white p-8 rounded-2xl border border-slate-200 hover:border-blue-400 hover:shadow-lg transition-all flex flex-col justify-between text-left group"
+                className="bg-white p-8 rounded-2xl border border-slate-200 hover:border-blue-400 hover:shadow-lg transition-all flex flex-col justify-between text-left group cursor-pointer"
               >
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">

@@ -218,7 +218,7 @@ const process = [
 const ServiceCard = ({ service }) => {
   const Icon = service.icon;
   return (
-    <div className={`bg-white rounded-2xl border border-slate-200 ${service.accentHover} hover:shadow-xl transition-all duration-300 flex flex-col text-left group`}>
+    <div className={`bg-white rounded-2xl border border-slate-200 ${service.accentHover} hover:shadow-xl transition-all duration-300 flex flex-col text-left group cursor-pointer`}>
       {/* Top section */}
       <div className="p-7 flex-1">
         <div className="flex items-start justify-between mb-5">
@@ -347,7 +347,7 @@ const Services = () => {
                 <button
                   key={cat.id}
                   onClick={() => setActive(cat.id)}
-                  className={`flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-semibold whitespace-nowrap transition-all shrink-0 ${
+                  className={`flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-semibold whitespace-nowrap transition-all shrink-0 cursor-pointer ${
                     isActive
                       ? 'bg-slate-900 text-white shadow-sm'
                       : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
