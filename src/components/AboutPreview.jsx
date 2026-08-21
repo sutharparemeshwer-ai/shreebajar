@@ -4,7 +4,9 @@ import {
   Building2,
   CheckCircle2,
   ArrowRight,
-  Sparkle
+  Sparkle,
+  TrendingUp,
+  Globe
 } from 'lucide-react';
 
 const AboutPreview = () => {

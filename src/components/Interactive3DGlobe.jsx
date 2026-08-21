@@ -7,17 +7,20 @@ const Interactive3DGlobe = ({ height = '400px' }) => {
   useEffect(() => {
     if (!containerRef.current) return;
 
+    const w = containerRef.current.clientWidth || 300;
+    const h = containerRef.current.clientHeight || 400;
+
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(
       60,
-      containerRef.current.clientWidth / containerRef.current.clientHeight,
+      w / h,
       0.1,
       1000
     );
     camera.position.z = 18;
 
     const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
-    renderer.setSize(containerRef.current.clientWidth, containerRef.current.clientHeight);
+    renderer.setSize(w, h);
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     containerRef.current.appendChild(renderer.domElement);
 

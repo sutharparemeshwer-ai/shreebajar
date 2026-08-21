@@ -8,8 +8,7 @@ const DottedCanvas = () => {
     if (!canvas) return;
     const ctx = canvas.getContext('2d');
 
-    let animationFrameId;
-    let width = (canvas.width = canvas.parentElement.clientWidth);
+    let width = (canvas.width = canvas.parentElement ? canvas.parentElement.clientWidth : window.innerWidth);
     let height = (canvas.height = 650);
 
     const gridSpacing = 28;
@@ -31,7 +30,7 @@ const DottedCanvas = () => {
     };
 
     const handleResize = () => {
-      if (!canvas.parentElement) return;
+      if (!canvas || !canvas.parentElement) return;
       width = canvas.width = canvas.parentElement.clientWidth;
       height = canvas.height = 650;
     };
