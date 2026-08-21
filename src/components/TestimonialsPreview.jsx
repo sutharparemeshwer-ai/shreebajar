@@ -7,7 +7,7 @@ const testimonials = [
     name: 'Riya Mehta',
     role: 'Bride — Wedding Client',
     rating: 5,
-    text: 'Shree Bazaar captured our wedding so beautifully. The cinematic teaser brought tears to my eyes. Absolutely world-class team and delivery was faster than promised!',
+    text: 'SK Marketing captured our wedding so beautifully. The cinematic teaser brought tears to my eyes. Absolutely world-class team and delivery was faster than promised!',
     avatar: 'RM',
     color: 'bg-indigo-100 text-indigo-700'
   },

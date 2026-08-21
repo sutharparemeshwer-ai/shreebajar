@@ -177,7 +177,7 @@ const ContactPreview = () => {
 
               {/* Email */}
               <a
-                href="mailto:hello@shreebazaar.com"
+                href="mailto:hello@skmarketing.com"
                 className="flex items-center gap-4 group cursor-pointer"
               >
                 <div className="p-3 rounded-xl bg-blue-50 border border-blue-100 text-blue-600 shrink-0 group-hover:bg-blue-600 group-hover:text-white transition-all">
@@ -185,7 +185,7 @@ const ContactPreview = () => {
                 </div>
                 <div>
                   <div className="text-xs text-slate-500 font-medium">Email Us</div>
-                  <div className="text-sm font-bold text-slate-900 group-hover:text-blue-600 transition-colors">hello@shreebazaar.com</div>
+                  <div className="text-sm font-bold text-slate-900 group-hover:text-blue-600 transition-colors">hello@skmarketing.com</div>
                 </div>
               </a>
 

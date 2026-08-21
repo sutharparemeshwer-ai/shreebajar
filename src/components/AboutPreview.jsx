@@ -36,7 +36,7 @@ const AboutPreview = () => {
           <div className="lg:col-span-6 space-y-6 text-left">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-indigo-50 border border-indigo-100 text-indigo-700 text-xs font-semibold uppercase tracking-wider">
               <Building2 className="w-3.5 h-3.5" />
-              <span>About Shree Bazaar Agency</span>
+              <span>About SK Marketing Agency</span>
             </div>
 
             <h2 className="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.15]">
@@ -44,7 +44,7 @@ const AboutPreview = () => {
             </h2>
 
             <p className="text-slate-600 text-base sm:text-lg leading-relaxed">
-              Shree Bazaar is a full-service media production and digital growth agency. We bridge the gap between stunning visual storytelling—wedding, party, and brand shoots—and high-converting Meta/Google ads, graphic design, custom web development, SEO & ASO.
+              SK Marketing is a full-service media production and digital growth agency. We bridge the gap between stunning visual storytelling—wedding, party, and brand shoots—and high-converting Meta/Google ads, graphic design, custom web development, SEO & ASO.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
@@ -77,7 +77,7 @@ const AboutPreview = () => {
             <div className="w-full max-w-lg">
               <img
                 src="/aboutgr.svg"
-                alt="Shree Bazaar Agency Team Illustration"
+                alt="SK Marketing Agency Team Illustration"
                 className="w-full h-auto object-contain drop-shadow-sm"
               />
             </div>

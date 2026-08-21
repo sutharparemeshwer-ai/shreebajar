@@ -33,15 +33,22 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         
         {/* Brand Logo */}
-        <Link to="/" className="flex items-center gap-2.5 group">
-          <div className="w-8 h-8 rounded-lg bg-slate-900 text-white flex items-center justify-center group-hover:bg-indigo-600 transition-colors">
-            <Camera className="w-4 h-4" />
-          </div>
-          <div className="flex items-baseline gap-1.5">
-            <span className="text-lg font-extrabold tracking-tight text-slate-900">
-              SHREE BAZAAR
+        <Link to="/" className="flex items-center gap-3 group">
+          <img
+            src="/sk.png"
+            alt="SK Marketing Logo"
+            className="h-9 sm:h-10 w-auto object-contain transition-transform group-hover:scale-105"
+          />
+          <div className="flex flex-col text-left">
+            <div className="flex items-center gap-1">
+              <span className="text-base sm:text-lg font-extrabold tracking-tight text-slate-900 leading-none">
+                SK MARKETING
+              </span>
+              <span className="w-1.5 h-1.5 rounded-full bg-indigo-600" />
+            </div>
+            <span className="text-[9px] font-bold text-indigo-600 uppercase tracking-widest leading-tight mt-0.5">
+              Grow Your Brand
             </span>
-            <span className="w-1.5 h-1.5 rounded-full bg-indigo-600" />
           </div>
         </Link>
 

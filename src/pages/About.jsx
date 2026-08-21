@@ -406,7 +406,7 @@ const About = () => {
           <div className="lg:col-span-6 space-y-6 text-left">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-slate-100/90 border border-slate-200 text-slate-800 text-xs font-semibold uppercase tracking-wider backdrop-blur-sm">
               <span className="w-2 h-2 rounded-full bg-indigo-600" />
-              About Shree Bazaar
+              About SK Marketing
             </div>
 
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-slate-900 leading-[1.08]">
@@ -477,7 +477,7 @@ const About = () => {
                 <span className="text-indigo-600">& Performance ROI</span>
               </h2>
               <p className="text-slate-500 text-sm leading-relaxed">
-                Most agencies pick a lane — photography or digital marketing. At Shree Bazaar, we do both. We produce breathtaking 4K/8K shoots while engineering high-ROI Meta & Google campaigns, print graphics, custom web apps, SEO & ASO.
+                Most agencies pick a lane — photography or digital marketing. At SK Marketing, we do both. We produce breathtaking 4K/8K shoots while engineering high-ROI Meta & Google campaigns, print graphics, custom web apps, SEO & ASO.
               </p>
               <p className="text-slate-500 text-sm leading-relaxed">
                 Our multidisciplinary team of cinematographers, ad strategists, graphic designers, and full-stack developers turn your vision into an industry-leading brand.
@@ -573,7 +573,7 @@ const About = () => {
               <div className="w-full max-w-md bg-slate-50/70 p-6 rounded-3xl border border-slate-100">
                 <img
                   src="/goals.svg"
-                  alt="Shree Bazaar Goals Illustration"
+                  alt="SK Marketing Goals Illustration"
                   className="w-full h-auto object-contain drop-shadow-sm"
                 />
               </div>
@@ -597,7 +597,7 @@ const About = () => {
           <div className="mt-8 bg-slate-900 text-white rounded-3xl p-10 flex flex-col sm:flex-row items-center justify-between gap-6">
             <div className="text-left">
               <div className="text-[10px] text-slate-400 uppercase tracking-wider font-semibold mb-1">Join our team</div>
-              <h3 className="text-2xl font-extrabold text-white">Want to work at Shree Bazaar?</h3>
+              <h3 className="text-2xl font-extrabold text-white">Want to work at SK Marketing?</h3>
               <p className="text-slate-400 text-sm mt-1">We're always looking for passionate creators, marketers, and developers.</p>
             </div>
             <Link to="/contact" className="shrink-0 inline-flex items-center gap-2 px-7 py-3.5 rounded-2xl bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-bold transition-all group">

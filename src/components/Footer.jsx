@@ -101,8 +101,20 @@ const Footer = () => {
 
           {/* Brand */}
           <div className="space-y-3 sm:space-y-5 lg:col-span-1">
-            <Link to="/" className="inline-block text-xl sm:text-2xl font-extrabold tracking-tight text-white">
-              SHREE <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">BAZAAR</span>
+            <Link to="/" className="inline-flex items-center gap-3 group">
+              <img
+                src="/skfooter.png"
+                alt="SK Marketing Footer Logo"
+                className="h-9 sm:h-11 w-auto object-contain transition-transform group-hover:scale-105"
+              />
+              <div className="flex flex-col text-left">
+                <span className="text-lg sm:text-xl font-extrabold tracking-tight text-white leading-none">
+                  SK MARKETING
+                </span>
+                <span className="text-[10px] font-bold text-indigo-400 uppercase tracking-widest leading-tight mt-1">
+                  Grow Your Brand
+                </span>
+              </div>
             </Link>
 
             <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
@@ -202,13 +214,13 @@ const Footer = () => {
               </li>
 
               <li>
-                <a href="mailto:hello@shreebazaar.com" className="flex items-start gap-2.5 sm:gap-3 group cursor-pointer">
+                <a href="mailto:hello@skmarketing.com" className="flex items-start gap-2.5 sm:gap-3 group cursor-pointer">
                   <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-blue-600/20 border border-blue-500/20 flex items-center justify-center shrink-0 group-hover:bg-blue-600 transition-all">
                     <Mail className="w-3.5 h-3.5 text-blue-400 group-hover:text-white transition-colors" />
                   </div>
                   <div>
                     <div className="text-[10px] uppercase tracking-wider text-slate-500 mb-0.5">Email</div>
-                    <div className="text-xs sm:text-sm font-semibold text-slate-300 group-hover:text-blue-400 transition-colors">hello@shreebazaar.com</div>
+                    <div className="text-xs sm:text-sm font-semibold text-slate-300 group-hover:text-blue-400 transition-colors">hello@skmarketing.com</div>
                   </div>
                 </a>
               </li>
@@ -233,7 +245,7 @@ const Footer = () => {
       {/* ── BOTTOM STRIP ───────────────────────────────────────── */}
       <div className="relative z-10 border-t border-white/[0.06]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 sm:py-5 flex flex-col sm:flex-row items-center justify-between gap-2.5">
-          <span className="text-[11px] sm:text-xs text-slate-600">© {year} Shree Bazaar Media & Marketing. All rights reserved.</span>
+          <span className="text-[11px] sm:text-xs text-slate-600">© {year} SK Marketing. All rights reserved.</span>
           <div className="flex items-center gap-4 sm:gap-5 text-[11px] sm:text-xs text-slate-600">
             <a href="#" className="hover:text-slate-300 transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-slate-300 transition-colors">Terms of Service</a>
