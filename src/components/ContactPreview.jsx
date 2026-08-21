@@ -12,7 +12,7 @@ import {
 } from 'lucide-react';
 
 const services = [
-  'Wedding / Party Shoot',
+  'Product / Commercial Shoot',
   'Brand / Ad Shoot',
   'Meta Ads (FB/IG)',
   'Google Ads / PPC',
@@ -157,7 +157,7 @@ const ContactPreview = () => {
             </h2>
 
             <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-              Whether you need a wedding shoot, a high-converting Meta ad campaign, a restaurant menu, or a custom website — we're ready to make it happen.
+              Whether you need a product shoot, a high-converting Meta ad campaign, a restaurant menu, or a custom website — we're ready to make it happen.
             </p>
 
             <div className="space-y-4 pt-2">

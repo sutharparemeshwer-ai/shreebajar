@@ -93,7 +93,7 @@ const Contact = () => {
   const [openFaq, setOpenFaq] = useState(null);
 
   const serviceOptions = [
-    'Wedding / Party Shoot',
+    'Product / Commercial Shoot',
     'Brand / Ad Shoot',
     'Meta Ads (FB/IG)',
     'Google Ads / PPC',
@@ -201,7 +201,7 @@ const Contact = () => {
             </h1>
 
             <p className="text-slate-600 text-base sm:text-lg leading-relaxed max-w-xl font-normal">
-              Whether you need a wedding shoot, a high-converting Meta ad campaign, a luxury restaurant menu, or a custom website — we're ready to make it happen.
+              Whether you need a product shoot, a high-converting Meta ad campaign, a luxury restaurant menu, or a custom website — we're ready to make it happen.
             </p>
 
             {/* Trust row */}
@@ -399,13 +399,13 @@ const Contact = () => {
                   <span className="text-xs text-slate-400 ml-1">4.9 / 5.0</span>
                 </div>
                 <p className="text-xs text-slate-400 leading-relaxed italic mb-3">
-                  "SK Marketing completely transformed our brand — stunning wedding film, killer Meta ads, and a website that actually converts. Best decision we made."
+                  "SK Marketing completely transformed our brand — stunning product film, killer Meta ads, and a website that actually converts. Best decision we made."
                 </p>
                 <div className="flex items-center gap-2">
                   <div className="w-7 h-7 rounded-full bg-indigo-600 flex items-center justify-center text-[10px] font-bold text-white">RK</div>
                   <div>
                     <div className="text-[11px] font-bold text-white">Riya Kapoor</div>
-                    <div className="text-[10px] text-slate-500">Wedding Client · Delhi</div>
+                    <div className="text-[10px] text-slate-500">E-Commerce Client · Delhi</div>
                   </div>
                 </div>
               </div>

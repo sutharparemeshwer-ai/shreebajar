@@ -6,7 +6,7 @@ const Footer = () => {
   const year = new Date().getFullYear();
 
   const serviceLinks = [
-    'Wedding & Event Shoots',
+    'Product & Brand Shoots',
     'Brand & Ad Shoots',
     'Meta & Google Ads',
     'Poster & Menu Design',
@@ -101,17 +101,17 @@ const Footer = () => {
 
           {/* Brand */}
           <div className="space-y-3 sm:space-y-5 lg:col-span-1">
-            <Link to="/" className="inline-flex items-center gap-3 group">
+            <Link to="/" className="inline-flex items-center gap-3.5 group">
               <img
                 src="/skfooter.png"
                 alt="SK Marketing Footer Logo"
-                className="h-9 sm:h-11 w-auto object-contain transition-transform group-hover:scale-105"
+                className="h-14 sm:h-16 w-auto object-contain transition-transform group-hover:scale-105"
               />
               <div className="flex flex-col text-left">
-                <span className="text-lg sm:text-xl font-extrabold tracking-tight text-white leading-none">
+                <span className="text-xl sm:text-2xl font-extrabold tracking-tight text-white leading-none">
                   SK MARKETING
                 </span>
-                <span className="text-[10px] font-bold text-indigo-400 uppercase tracking-widest leading-tight mt-1">
+                <span className="text-[11px] font-bold text-indigo-400 uppercase tracking-widest leading-tight mt-1">
                   Grow Your Brand
                 </span>
               </div>

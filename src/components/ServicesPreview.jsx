@@ -16,8 +16,8 @@ const ServicesPreview = () => {
       title: 'Media & Shoots',
       icon: Camera,
       badge: '4K/8K Cinematic',
-      desc: 'Wedding shoots, party shoots, corporate brand films, viral ad shoots, and luxury product photography.',
-      features: ['Wedding Shoots', 'Party Shoots', 'Brand Commercials', 'Product Ad Shoots'],
+      desc: 'Product shoots, commercial ad shoots, corporate brand films, and luxury product photography.',
+      features: ['Product Shoots', 'Commercial Ads', 'Brand Films', 'E-Commerce Photography'],
       color: 'text-indigo-600',
       bgColor: 'bg-indigo-50 border-indigo-100'
     },
@@ -59,7 +59,7 @@ const ServicesPreview = () => {
           </h2>
           
           <p className="text-slate-600 text-base max-w-2xl mx-auto">
-            From high-end wedding and commercial shoots to Meta/Google ads, graphic print design, video editing, custom web dev, SEO & ASO.
+            From high-end product and commercial shoots to Meta/Google ads, graphic print design, video editing, custom web dev, SEO & ASO.
           </p>
 
           {/* View More Services AS A LINK (Not a Button) */}

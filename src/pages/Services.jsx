@@ -41,13 +41,13 @@ const services = [
     badgeColor: 'bg-violet-50 text-violet-700 border-violet-100',
     iconColor: 'bg-violet-50 text-violet-600 border-violet-100',
     accentHover: 'hover:border-violet-300',
-    title: 'Wedding & Event Photography / Videography',
-    desc: 'Full wedding day coverage, party shoots, engagement films, drone aerial videography, and luxury album printing.',
+    title: 'Product & Commercial Photography / Videography',
+    desc: 'High-converting 4K product shoots, commercial ad videos, e-commerce catalog photography, drone aerials, and studio lighting.',
     features: [
-      'Full Wedding & Sangeet Coverage',
+      'Product & Commercial Shoots',
       'Cinematic Teaser & Highlight Film',
       'Drone 4K Aerial Videography',
-      'Pre-Wedding & Party Shoots',
+      'Studio & On-Location Shoots',
     ],
     pricing: 'Custom Package Quotes',
     pricingNote: 'Tailored to your event',
@@ -324,7 +324,7 @@ const Services = () => {
             {[
               { target: 9,    suffix: '+',   label: 'Services Offered',    sub: 'All under one roof',  color: 'text-indigo-600' },
               { target: 10,   prefix: '₹', suffix: 'Cr+', label: 'Ad Revenue Managed',  sub: 'Meta & Google',        color: 'text-emerald-600' },
-              { target: 350,  suffix: '+',   label: 'Shoots Delivered',    sub: 'Weddings & Brands',    color: 'text-violet-600' },
+              { target: 350,  suffix: '+',   label: 'Shoots Delivered',    sub: 'Products & Brands',    color: 'text-violet-600' },
               { target: 4.9,  suffix: '★', decimals: 1, label: 'Client Satisfaction', sub: 'Verified reviews', color: 'text-amber-600' },
             ].map((s, i) => (
               <div key={i} className="bg-white rounded-2xl border border-slate-200 p-5 shadow-sm hover:shadow-md hover:border-slate-300 transition-all">
@@ -430,7 +430,7 @@ const Services = () => {
                 <span className="text-indigo-400">We'll Build It for You.</span>
               </h2>
               <p className="text-slate-400 text-sm leading-relaxed">
-                Combine wedding shoots + Meta ads + restaurant menus + video editing + web development into one bespoke agency package built around your budget and goals.
+                Combine product shoots + Meta ads + restaurant menus + video editing + web development into one bespoke agency package built around your budget and goals.
               </p>
               <div className="mt-5 flex flex-wrap gap-3 text-xs text-slate-400 font-semibold">
                 {['No Lock-in', 'Dedicated Manager', 'Weekly Reports', 'Transparent Pricing'].map((t, i) => (

@@ -5,9 +5,9 @@ import { Star, ArrowRight, Quote } from 'lucide-react';
 const testimonials = [
   {
     name: 'Riya Mehta',
-    role: 'Bride — Wedding Client',
+    role: 'E-Commerce Founder',
     rating: 5,
-    text: 'SK Marketing captured our wedding so beautifully. The cinematic teaser brought tears to my eyes. Absolutely world-class team and delivery was faster than promised!',
+    text: 'SK Marketing captured our product shoot so beautifully. The commercial ad teaser brought explosive sales. Absolutely world-class team and delivery was faster than promised!',
     avatar: 'RM',
     color: 'bg-indigo-100 text-indigo-700'
   },

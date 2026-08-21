@@ -35,7 +35,7 @@ const teamMembers = [
       { label: 'Experience', value: '8+ Years' },
       { label: 'Speciality', value: '4K/8K Shoots' },
       { label: 'Projects', value: '200+ Delivered' },
-      { label: 'Expertise', value: 'Wedding & Brand Films' },
+      { label: 'Expertise', value: 'Product & Brand Films' },
     ],
     badges: ['Director', 'Drone Pilot', 'Brand Films'],
     accentColor: '#6366f1',
@@ -341,7 +341,7 @@ const TeamAccordion = () => {
 ──────────────────────────────────────────────────────────── */
 const About = () => {
   const pillars = [
-    { icon: Camera,    title: 'Cinematic Shoots',  desc: '4K/8K cameras, prime lenses & drone videography for weddings, brand ads, and corporate films.', accent: 'bg-violet-50 text-violet-600 border border-violet-100' },
+    { icon: Camera,    title: 'Cinematic Shoots',  desc: '4K/8K cameras, prime lenses & drone videography for product shoots, brand ads, and corporate films.', accent: 'bg-violet-50 text-violet-600 border border-violet-100' },
     { icon: Megaphone, title: 'Performance Ads',   desc: 'ROAS-obsessed Meta & Google campaigns. Every rupee tracked and optimised for maximum profit.',  accent: 'bg-indigo-50 text-indigo-600 border border-indigo-100' },
     { icon: Palette,   title: 'Print & Branding',  desc: 'Luxury menus, posters, business cards, and brand identities that command instant attention.',      accent: 'bg-rose-50 text-rose-600 border border-rose-100' },
     { icon: Code2,     title: 'Web Dev & SEO',     desc: 'Ultra-fast custom web apps ranked #1 on Google Search and top of the App Store charts.',          accent: 'bg-emerald-50 text-emerald-600 border border-emerald-100' },
@@ -388,7 +388,7 @@ const About = () => {
   ];
 
   const stats = [
-    { target: 350, suffix: '+', label: 'Shoots Delivered', sub: 'Weddings & Brands' },
+    { target: 350, suffix: '+', label: 'Shoots Delivered', sub: 'Products & Brands' },
     { target: 10, prefix: '₹', suffix: 'Cr+', label: 'Ad Revenue Managed', sub: 'Meta & Google Ads' },
     { target: 150, suffix: '+', label: 'Web Dev Projects', sub: 'Custom Engineering' },
     { target: 4.9, suffix: '★', decimals: 1, label: 'Client Rating', sub: 'Verified Reviews' },
@@ -416,7 +416,7 @@ const About = () => {
             </h1>
 
             <p className="text-slate-600 text-base sm:text-lg leading-relaxed max-w-xl font-normal">
-              India's all-in-one media production and performance marketing agency. From 4K wedding shoots to Rs10Cr+ Meta ad campaigns — we make your brand unmissable.
+              India's all-in-one media production and performance marketing agency. From 4K product shoots to Rs10Cr+ Meta ad campaigns — we make your brand unmissable.
             </p>
 
             <div className="flex flex-wrap items-center gap-5 text-xs text-slate-700 font-semibold">

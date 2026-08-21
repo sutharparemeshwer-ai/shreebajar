@@ -29,7 +29,7 @@ const Home = () => {
   };
 
   const agencyStats = [
-    { label: 'Shoots Delivered', target: 350, suffix: '+', sub: 'Weddings & Brands' },
+    { label: 'Shoots Delivered', target: 350, suffix: '+', sub: 'Products & Brands' },
     { label: 'Ad Sales Generated', target: 10, prefix: '₹', suffix: 'Cr+', sub: 'Meta & Google Ads' },
     { label: 'Web & App Projects', target: 150, suffix: '+', sub: 'Custom Engineering' },
     { label: 'Client Satisfaction', target: 99.7, decimals: 1, suffix: '%', sub: 'Verified Rating' }
@@ -60,7 +60,7 @@ const Home = () => {
             </h1>
 
             <p className="text-slate-600 text-base sm:text-lg leading-relaxed max-w-xl font-normal">
-              We help brands scale with professional wedding & commercial ad shoots, Meta & Google ads, print design (posters, menus, business cards), video editing, custom web development, SEO & ASO.
+              We help brands scale with professional product & commercial ad shoots, Meta & Google ads, print design (posters, menus, business cards), video editing, custom web development, SEO & ASO.
             </p>
 
             <form onSubmit={handleAuditRequest} className="max-w-md bg-white p-1.5 rounded-2xl border border-slate-300 shadow-sm flex items-center gap-2">
@@ -122,7 +122,7 @@ const Home = () => {
                       <p className="text-[10px] text-slate-300">Welcome to SK Marketing! Ready to grow your brand with shoots & ad campaigns?</p>
                     </div>
                     <div className="bg-indigo-600 p-2.5 rounded-xl text-white text-[10px] font-medium ml-3 shadow-md">
-                      Yes! Book the wedding shoot & launch Meta Ads!
+                      Yes! Book the product shoot & launch Meta Ads!
                     </div>
                     <div className="bg-slate-900 p-2.5 rounded-xl border border-slate-800 text-[10px] text-slate-300">
                       <p className="text-emerald-400 font-semibold flex items-center gap-1">

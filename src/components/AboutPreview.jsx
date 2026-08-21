@@ -11,24 +11,26 @@ const AboutPreview = () => {
   const highlights = [
     {
       title: 'Cinematic Shoot Studio',
-      desc: 'Top-tier 4K/8K equipment & drone videography for weddings, corporate films, and viral ad campaigns.'
+      desc: 'Top-tier 4K/8K equipment & drone videography for product shoots, corporate films, and viral ad campaigns.'
     },
     {
-      title: 'Performance Marketing Team',
-      desc: 'Certified Meta & Google Ads managers focused on high ROAS, lead gen, and lower customer acquisition costs.'
+      icon: TrendingUp,
+      title: 'Performance Ads & ROAS',
+      desc: 'Data-driven Meta & Google ad campaigns engineered for maximum return on ad spend.'
     },
     {
       title: 'Graphic & Print Experts',
       desc: 'Designing high-converting posters, restaurant menus, luxury business cards, and packaging.'
     },
     {
-      title: 'Custom Web Dev & SEO/ASO',
-      desc: 'Building lightning-fast custom websites while ranking #1 on Google Search and App Stores.'
+      icon: Globe,
+      title: 'Custom Web Dev & Apps',
+      desc: 'High-speed, conversion-focused websites, e-commerce stores, SEO & ASO.'
     }
   ];
 
   return (
-    <section className="relative z-10 bg-white py-20 px-4 sm:px-6 lg:px-8 border-b border-slate-100">
+    <section className="relative z-10 bg-white border-t border-slate-100 py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
 
@@ -44,7 +46,7 @@ const AboutPreview = () => {
             </h2>
 
             <p className="text-slate-600 text-base sm:text-lg leading-relaxed">
-              SK Marketing is a full-service media production and digital growth agency. We bridge the gap between stunning visual storytelling—wedding, party, and brand shoots—and high-converting Meta/Google ads, graphic design, custom web development, SEO & ASO.
+              SK Marketing is a full-service media production and digital growth agency. We bridge the gap between stunning visual storytelling—product, party, and brand shoots—and high-converting Meta/Google ads, graphic design, custom web development, SEO & ASO.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
