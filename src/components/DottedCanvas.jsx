@@ -8,6 +8,7 @@ const DottedCanvas = () => {
     if (!canvas) return;
     const ctx = canvas.getContext('2d');
 
+    let animationFrameId;
     let width = (canvas.width = canvas.parentElement ? canvas.parentElement.clientWidth : window.innerWidth);
     let height = (canvas.height = 650);
 
