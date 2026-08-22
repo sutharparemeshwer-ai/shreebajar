@@ -4,7 +4,6 @@ import DottedCanvas from '../components/DottedCanvas';
 import TrustedBrands from '../components/TrustedBrands';
 import ServicesPreview from '../components/ServicesPreview';
 import AboutPreview from '../components/AboutPreview';
-import TestimonialsPreview from '../components/TestimonialsPreview';
 import ContactPreview from '../components/ContactPreview';
 import AnimatedCounter from '../components/AnimatedCounter';
 import {
@@ -211,9 +210,6 @@ const Home = () => {
 
       {/* ======================== ABOUT PREVIEW ======================== */}
       <AboutPreview />
-
-      {/* ======================== TESTIMONIALS ======================== */}
-      <TestimonialsPreview />
 
       {/* ======================== CONTACT US ======================== */}
       <ContactPreview />

@@ -21,317 +21,119 @@ import {
 } from 'lucide-react';
 
 /* ────────────────────────────────────────────────────────────
-   TEAM ACCORDION SLIDER
-   Inspired by the car accordion pattern — adapted for persons
+   2-CARD EXECUTIVE TEAM SECTION
 ──────────────────────────────────────────────────────────── */
 const teamMembers = [
   {
-    number: '01',
-    photo: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80',
     name: 'Arjun Mehta',
     role: 'Founder & Creative Director',
-    subtitle: 'Cinematographer · Visual Storyteller',
-    skills: [
+    subtitle: 'Cinematography · 4K/8K Shoots · Brand Storytelling',
+    photo: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80',
+    tag: 'Creative Leadership',
+    stats: [
       { label: 'Experience', value: '8+ Years' },
-      { label: 'Speciality', value: '4K/8K Shoots' },
-      { label: 'Projects', value: '200+ Delivered' },
-      { label: 'Expertise', value: 'Product & Brand Films' },
+      { label: 'Shoots Delivered', value: '200+' },
+      { label: 'Speciality', value: '4K/8K Cinema' },
+      { label: 'Rating', value: '4.9★ Verified' },
     ],
-    badges: ['Director', 'Drone Pilot', 'Brand Films'],
-    accentColor: '#6366f1',
+    badges: ['Director', 'Drone Pilot', 'Commercial Ads', 'Brand Films'],
+    color: 'from-indigo-600 to-violet-600',
+    badgeBg: 'bg-indigo-50 text-indigo-700 border-indigo-100',
   },
   {
-    number: '02',
-    photo: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80',
     name: 'Priya Kapoor',
-    role: 'Head of Performance Marketing',
-    subtitle: 'Meta & Google Ads Strategist',
-    skills: [
-      { label: 'Ad Spend Managed', value: 'Rs10Cr+' },
-      { label: 'Avg. ROAS', value: '4.8x' },
-      { label: 'Campaigns', value: '300+ Live' },
-      { label: 'Platforms', value: 'Meta, Google, YouTube' },
+    role: 'Head of Growth & Performance Marketing',
+    subtitle: 'Meta & Google Ads · High ROAS · Full Stack Web',
+    photo: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80',
+    tag: 'Performance & Growth',
+    stats: [
+      { label: 'Ad Revenue Managed', value: '₹10Cr+' },
+      { label: 'Average ROAS', value: '4.8x' },
+      { label: 'Web Apps Built', value: '150+' },
+      { label: 'Live Campaigns', value: '300+' },
     ],
-    badges: ['Meta Certified', 'Google Partner', 'ROAS Expert'],
-    accentColor: '#3b82f6',
-  },
-  {
-    number: '03',
-    photo: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80',
-    name: 'Rohan Sharma',
-    role: 'Lead Developer & SEO Architect',
-    subtitle: 'Full-Stack Engineer · SEO/ASO Strategist',
-    skills: [
-      { label: 'Web Projects', value: '150+ Built' },
-      { label: 'Stack', value: 'React / Next.js' },
-      { label: 'SEO Rankings', value: '50+ Page 1' },
-      { label: 'Platforms', value: 'Web, iOS, Android' },
-    ],
-    badges: ['React', 'SEO', 'ASO'],
-    accentColor: '#10b981',
+    badges: ['Meta Certified', 'Google Partner', 'ROAS Expert', 'SEO/ASO Lead'],
+    color: 'from-blue-600 to-indigo-600',
+    badgeBg: 'bg-blue-50 text-blue-700 border-blue-100',
   },
 ];
 
-const TeamAccordion = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth < 768);
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
-
-  const handlePrev = () => {
-    setActiveIndex((prev) => (prev - 1 + teamMembers.length) % teamMembers.length);
-  };
-  const handleNext = () => {
-    setActiveIndex((prev) => (prev + 1) % teamMembers.length);
-  };
-
-  // Arrow key navigation
-  useEffect(() => {
-    const onKey = (e) => {
-      if (e.key === 'ArrowLeft')  handlePrev();
-      if (e.key === 'ArrowRight') handleNext();
-    };
-    document.addEventListener('keydown', onKey);
-    return () => document.removeEventListener('keydown', onKey);
-  }, []);
-
+const TeamCardsGrid = () => {
   return (
-    <div
-      className="relative w-full rounded-3xl overflow-hidden border border-slate-200 shadow-xl transition-all duration-300"
-      style={{ height: isMobile ? '600px' : '520px' }}
-    >
-      {/* Slides */}
-      <div style={{ display: 'flex', flexDirection: isMobile ? 'column' : 'row', height: '100%', position: 'relative' }}>
-        {teamMembers.map((member, i) => {
-          const isActive = i === activeIndex;
-          return (
-            <div
-              key={i}
-              onClick={() => setActiveIndex(i)}
-              style={{
-                flex: isActive ? (isMobile ? '3.5' : '1.6') : '1',
-                backgroundImage: `url('${member.photo}')`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center top',
-                transition: 'flex 0.6s cubic-bezier(0.4, 0, 0.2, 1)',
-                position: 'relative',
-                cursor: 'pointer',
-                overflow: 'hidden',
-                filter: isActive ? 'grayscale(0)' : 'grayscale(0.6)',
-              }}
-            >
-              {/* Dark gradient overlay */}
-              <div style={{
-                position: 'absolute', inset: 0,
-                background: isActive
-                  ? 'linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.75) 60%, rgba(0,0,0,0.92) 100%)'
-                  : 'linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.85) 100%)',
-                transition: 'background 0.6s ease',
-              }} />
-
-              {/* Accent color bar */}
-              <div style={{
-                position: 'absolute', bottom: 0, left: 0, right: 0, height: '3px',
-                background: member.accentColor,
-                opacity: isActive ? 1 : 0,
-                transition: 'opacity 0.4s ease 0.4s',
-              }} />
-
-              {/* NUMBER */}
-              <div style={{
-                position: 'absolute',
-                top: isMobile ? '12px' : '24px',
-                left: isMobile ? '16px' : '24px',
-                fontSize: isActive ? (isMobile ? '28px' : '42px') : (isMobile ? '22px' : '32px'),
-                fontWeight: '300',
-                color: 'rgba(255,255,255,0.6)',
-                lineHeight: 1,
-                transition: 'all 0.6s ease',
-              }}>
-                {member.number}
-              </div>
-
-              {/* COLLAPSED label */}
-              {!isActive && (
-                <div style={{
-                  position: 'absolute',
-                  bottom: isMobile ? '14px' : '80px',
-                  left: isMobile ? '60px' : '18px',
-                  color: 'rgba(255,255,255,0.95)',
-                  fontSize: isMobile ? '12px' : '13px',
-                  fontWeight: '700',
-                  whiteSpace: 'nowrap',
-                  transform: isMobile ? 'none' : 'rotate(-90deg)',
-                  transformOrigin: isMobile ? 'unset' : 'left bottom',
-                  letterSpacing: '0.05em',
-                  transition: 'all 0.5s ease',
-                }}>
-                  {member.name} — <span style={{ color: 'rgba(255,255,255,0.7)', fontWeight: '500' }}>{member.role}</span>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      {teamMembers.map((member, i) => (
+        <div
+          key={i}
+          className="group bg-white rounded-3xl border border-slate-200 p-6 sm:p-8 shadow-sm hover:shadow-2xl hover:border-indigo-400 transition-all duration-300 flex flex-col justify-between text-left"
+        >
+          <div>
+            {/* Header: Photo + Badge */}
+            <div className="flex items-start justify-between gap-4 mb-6">
+              <div className="flex items-center gap-4">
+                <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-2xl overflow-hidden shrink-0 border-2 border-slate-100 shadow-md">
+                  <img
+                    src={member.photo}
+                    alt={member.name}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className={`absolute bottom-0 inset-x-0 h-1 bg-gradient-to-r ${member.color}`} />
                 </div>
-              )}
-
-              {/* CONTENT BLOCK — bottom */}
-              <div style={{
-                position: 'absolute',
-                bottom: isMobile ? '14px' : '28px',
-                left: isMobile ? '16px' : '28px',
-                right: isMobile ? '16px' : '28px',
-                color: 'white',
-                zIndex: 2,
-                opacity: isActive ? 1 : 0,
-                transform: isActive ? 'translateY(0)' : 'translateY(20px)',
-                transition: 'all 0.5s cubic-bezier(0.4, 0, 0.2, 1)',
-                transitionDelay: isActive ? '0.3s' : '0s',
-              }}>
-                {/* Role badge */}
-                <div style={{
-                  display: 'inline-flex', alignItems: 'center', gap: '6px',
-                  background: member.accentColor,
-                  borderRadius: '20px',
-                  padding: '3px 12px',
-                  fontSize: '10px',
-                  fontWeight: '700',
-                  textTransform: 'uppercase',
-                  letterSpacing: '0.08em',
-                  marginBottom: '10px',
-                }}>
-                  {member.role}
-                </div>
-
-                {/* Name */}
-                <div style={{
-                  fontSize: '24px', fontWeight: '800', marginBottom: '4px',
-                  letterSpacing: '-0.02em',
-                }}>
-                  {member.name}
-                </div>
-
-                {/* Subtitle */}
-                <div style={{
-                  fontSize: '13px', color: 'rgba(255,255,255,0.7)',
-                  marginBottom: '16px', fontWeight: '500',
-                }}>
-                  {member.subtitle}
-                </div>
-
-                {/* Skills grid */}
-                <div style={{
-                  display: 'grid', gridTemplateColumns: '1fr 1fr',
-                  gap: '6px', marginBottom: '14px',
-                }}>
-                  {member.skills.map((sk, si) => (
-                    <div key={si} style={{
-                      background: 'rgba(255,255,255,0.08)',
-                      borderRadius: '10px',
-                      padding: '7px 10px',
-                      backdropFilter: 'blur(6px)',
-                      border: '1px solid rgba(255,255,255,0.1)',
-                      opacity: isActive ? 1 : 0,
-                      transform: isActive ? 'translateX(0)' : 'translateX(-12px)',
-                      transition: `all 0.4s ease ${isActive ? 0.4 + si * 0.06 : 0}s`,
-                    }}>
-                      <div style={{ fontSize: '10px', color: 'rgba(255,255,255,0.5)', marginBottom: '2px' }}>
-                        {sk.label}
-                      </div>
-                      <div style={{ fontSize: '12px', fontWeight: '700' }}>
-                        {sk.value}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-
-                {/* Badges row */}
-                <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
-                  {member.badges.map((badge, bi) => (
-                    <div key={bi} style={{
-                      display: 'flex', alignItems: 'center', gap: '5px',
-                      padding: '4px 10px',
-                      background: 'rgba(255,255,255,0.1)',
-                      borderRadius: '20px',
-                      fontSize: '11px', fontWeight: '600',
-                      border: '1px solid rgba(255,255,255,0.15)',
-                      backdropFilter: 'blur(4px)',
-                      opacity: isActive ? 1 : 0,
-                      transform: isActive ? 'scale(1)' : 'scale(0.85)',
-                      transition: `all 0.35s ease ${isActive ? 0.65 + bi * 0.07 : 0}s`,
-                    }}>
-                      <span style={{
-                        width: '6px', height: '6px', borderRadius: '50%',
-                        background: member.accentColor, display: 'inline-block',
-                      }} />
-                      {badge}
-                    </div>
-                  ))}
+                <div>
+                  <div className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-wider mb-1.5 border ${member.badgeBg}`}>
+                    <Sparkles className="w-3 h-3" />
+                    {member.tag}
+                  </div>
+                  <h3 className="text-xl sm:text-2xl font-extrabold text-slate-900 group-hover:text-indigo-600 transition-colors">
+                    {member.name}
+                  </h3>
+                  <div className="text-xs sm:text-sm font-bold text-slate-600 mt-0.5">
+                    {member.role}
+                  </div>
                 </div>
               </div>
             </div>
-          );
-        })}
-      </div>
 
-      {/* Nav arrows */}
-      <button
-        onClick={handlePrev}
-        style={{
-          position: 'absolute', top: '50%', left: '16px',
-          transform: 'translateY(-50%)',
-          width: '40px', height: '40px',
-          background: 'rgba(255,255,255,0.12)',
-          border: '1px solid rgba(255,255,255,0.2)',
-          borderRadius: '50%',
-          color: 'white', cursor: 'pointer',
-          display: 'flex', alignItems: 'center', justifyContent: 'center',
-          zIndex: 10, backdropFilter: 'blur(8px)',
-          transition: 'background 0.2s ease',
-        }}
-      >
-        <ChevronLeft size={18} />
-      </button>
-      <button
-        onClick={handleNext}
-        style={{
-          position: 'absolute', top: '50%', right: '16px',
-          transform: 'translateY(-50%)',
-          width: '40px', height: '40px',
-          background: 'rgba(255,255,255,0.12)',
-          border: '1px solid rgba(255,255,255,0.2)',
-          borderRadius: '50%',
-          color: 'white', cursor: 'pointer',
-          display: 'flex', alignItems: 'center', justifyContent: 'center',
-          zIndex: 10, backdropFilter: 'blur(8px)',
-          transition: 'background 0.2s ease',
-        }}
-      >
-        <ChevronRight size={18} />
-      </button>
+            <p className="text-xs sm:text-sm text-slate-500 leading-relaxed mb-6 font-medium">
+              {member.subtitle}
+            </p>
 
-      {/* Dot indicators */}
-      <div style={{
-        position: 'absolute', bottom: '12px', left: '50%',
-        transform: 'translateX(-50%)',
-        display: 'flex', gap: '6px', zIndex: 10,
-      }}>
-        {teamMembers.map((_, i) => (
-          <button
-            key={i}
-            onClick={() => setActiveIndex(i)}
-            style={{
-              width: i === activeIndex ? '20px' : '6px',
-              height: '6px',
-              borderRadius: '3px',
-              background: i === activeIndex ? '#fff' : 'rgba(255,255,255,0.4)',
-              border: 'none', cursor: 'pointer',
-              transition: 'all 0.3s ease',
-              padding: 0,
-            }}
-          />
-        ))}
-      </div>
+            {/* Metrics 2x2 Grid */}
+            <div className="grid grid-cols-2 gap-2.5 mb-6">
+              {member.stats.map((st, idx) => (
+                <div key={idx} className="bg-slate-50 border border-slate-100 p-3 rounded-xl">
+                  <div className="text-[10px] text-slate-400 font-semibold uppercase tracking-wider mb-0.5">
+                    {st.label}
+                  </div>
+                  <div className="text-sm sm:text-base font-extrabold text-slate-900">
+                    {st.value}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Badges */}
+            <div className="flex flex-wrap gap-2 mb-6">
+              {member.badges.map((badge, idx) => (
+                <span
+                  key={idx}
+                  className="px-3 py-1 rounded-lg bg-slate-100 text-slate-700 text-xs font-semibold border border-slate-200/80"
+                >
+                  {badge}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          {/* Quick CTA */}
+          <Link
+            to="/contact"
+            className="w-full inline-flex items-center justify-center gap-2 py-3.5 px-5 rounded-2xl bg-slate-900 text-white font-bold text-xs sm:text-sm hover:bg-indigo-600 transition-all shadow-sm group/btn"
+          >
+            <span>Work With {member.name.split(' ')[0]}</span>
+            <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+          </Link>
+        </div>
+      ))}
     </div>
   );
 };
@@ -582,16 +384,16 @@ const About = () => {
         </div>
       </section>
 
-      {/* ══ OUR TEAM — ACCORDION SLIDER ══════════════════════════════ */}
+      {/* ══ EXECUTIVE TEAM ══════════════════════════════════════════ */}
       <section className="relative z-10 bg-slate-50 border-t border-slate-100 py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="mb-10">
-            <span className="text-xs font-bold text-indigo-600 uppercase tracking-widest block mb-2">The Team</span>
+          <div className="mb-12 text-left">
+            <span className="text-xs font-bold text-indigo-600 uppercase tracking-widest block mb-2">The Leadership</span>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-2">Meet the People Behind the Work</h2>
-            <p className="text-slate-500 text-sm max-w-lg">Click a panel to explore each team member. A small, elite team that punches way above its weight.</p>
+            <p className="text-slate-500 text-sm max-w-lg">Meet our core leadership — an elite team driving creative direction, 4K shoots, performance ad growth, and custom web dev.</p>
           </div>
 
-          <TeamAccordion />
+          <TeamCardsGrid />
 
           {/* Bottom CTA strip */}
           <div className="mt-8 bg-slate-900 text-white rounded-3xl p-10 flex flex-col sm:flex-row items-center justify-between gap-6">
