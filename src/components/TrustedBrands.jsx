@@ -4,40 +4,34 @@ import { Star, Award, ShieldCheck, TrendingUp, Sparkle } from 'lucide-react';
 const TrustedBrands = () => {
   const brandLogos = [
     {
-      name: 'Lumina Silks',
-      category: 'Luxury Fashion & Sarees',
-      result: '+180% Sales Growth • 4K Brand Shoot',
-      iconText: 'LUMINA'
+      name: 'TrioTech',
+      category: 'IT Hiring Company',
+      result: 'IT Hiring Platform • Staffing Ads',
+      iconText: 'TRIOTECH'
     },
     {
-      name: 'Aura Living',
-      category: 'Home Decor & Furniture',
-      result: '4.9x ROAS on Meta Ads • Custom Web Store',
-      iconText: 'AURA'
+      name: 'Pennic Bharat',
+      category: 'Full Stack Tech & Web',
+      result: 'Full Stack Web App • Tech Platform',
+      iconText: 'PENNIC BHARAT'
     },
     {
-      name: 'Nexus Tech',
-      category: 'D2C Consumer Electronics',
-      result: 'Google Ads Leader • 24hr Reel Edits',
-      iconText: 'NEXUS'
+      name: 'Beauty.com',
+      category: 'Beauty & Cosmetics',
+      result: 'Product Shoot • 4.8x Ad ROAS',
+      iconText: 'BEAUTY.COM'
     },
     {
-      name: 'Zenith Organics',
-      category: 'Gourmet Foods & Spices',
-      result: 'Brand Ad Shoot • Amazon & Google SEO',
-      iconText: 'ZENITH'
+      name: 'Garhgopal',
+      category: 'Heritage & Culture',
+      result: '4K Commercial Shoot • Brand Ads',
+      iconText: 'GARHGOPAL'
     },
     {
-      name: 'Varanasi Crafts',
-      category: 'Artisanal Heritage',
-      result: 'Pan-India Reach • Reels Video Editing',
-      iconText: 'VARANASI'
-    },
-    {
-      name: 'Velvet & Thread',
-      category: 'Boutique Apparel',
-      result: 'Meta Ads Conversion • Printable Menus & Cards',
-      iconText: 'VELVET'
+      name: 'Karni Resort',
+      category: 'Luxury Hospitality & Resort',
+      result: 'Cinematic Shoot • Booking Ads',
+      iconText: 'KARNI RESORT'
     }
   ];
 
@@ -50,7 +44,7 @@ const TrustedBrands = () => {
           
           {/* Big Blue Main Heading */}
           <h2 className="text-3xl sm:text-5xl font-extrabold text-blue-600 tracking-tight">
-            Trusted By 250+ Brands & Startups
+            Trusted By 25+ Brands & Companies
           </h2>
 
           {/* Subheading & Rating Bar */}
@@ -63,29 +57,32 @@ const TrustedBrands = () => {
             <span className="text-sm font-extrabold text-slate-900">4.9/5 Rating</span>
             <span className="text-slate-400">•</span>
             <span className="text-xs text-slate-500 font-semibold uppercase tracking-wider">
-              350+ Verified Shoots & Growth Campaigns
+              200+ Verified Shoots & Growth Campaigns
             </span>
           </div>
         </div>
 
         {/* Brand Logos Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
           {brandLogos.map((brand, idx) => (
             <div
               key={idx}
               className="group bg-white p-5 rounded-2xl border border-slate-200 hover:border-blue-400 hover:shadow-md transition-all text-center flex flex-col justify-between cursor-pointer"
             >
               <div className="h-10 flex items-center justify-center">
-                <span className="font-extrabold tracking-widest text-slate-400 group-hover:text-blue-600 transition-colors text-sm sm:text-base">
+                <span className="font-extrabold tracking-wider text-slate-400 group-hover:text-blue-600 transition-colors text-xs sm:text-sm uppercase">
                   {brand.iconText}
                 </span>
               </div>
 
-              <div className="pt-2 border-t border-slate-100">
-                <div className="text-[11px] font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
+              <div className="pt-2.5 border-t border-slate-100">
+                <div className="text-xs font-extrabold text-slate-900 group-hover:text-blue-600 transition-colors">
                   {brand.name}
                 </div>
-                <div className="text-[9px] text-slate-500 font-medium truncate mt-0.5">
+                <div className="text-[10px] text-slate-500 font-medium truncate mt-0.5">
+                  {brand.category}
+                </div>
+                <div className="text-[9px] text-indigo-600 font-semibold truncate mt-1">
                   {brand.result}
                 </div>
               </div>

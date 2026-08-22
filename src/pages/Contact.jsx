@@ -117,9 +117,9 @@ const Contact = () => {
     {
       icon: Phone,
       title: 'Call / WhatsApp',
-      value: '+91 98765 43210',
-      sub: 'Mon–Sat, 9am – 8pm IST',
-      href: 'tel:+919876543210',
+      value: '+91 81047 78802 / +91 90797 96585',
+      sub: 'Both available on WhatsApp (Mon–Sat, 9am – 8pm IST)',
+      href: 'https://wa.me/918104778802',
       accent: 'bg-indigo-50 text-indigo-600 border-indigo-100',
     },
     {
@@ -132,10 +132,10 @@ const Contact = () => {
     },
     {
       icon: MapPin,
-      title: 'Studio Location',
-      value: 'India — Serving Nationwide',
-      sub: 'On-site shoots across India',
-      href: 'https://maps.google.com',
+      title: 'Office & Studio Location',
+      value: 'Main Market, Shri Dungargarh, Bikaner, Rajasthan 331803',
+      sub: 'On-site shoots across Rajasthan & India',
+      href: 'https://maps.google.com/?q=Main+Market,+Shri+Dungargarh,+Bikaner,+Rajasthan+331803',
       accent: 'bg-rose-50 text-rose-600 border-rose-100',
     },
     {
@@ -374,7 +374,7 @@ const Contact = () => {
 
               {/* WhatsApp instant CTA */}
               <a
-                href="https://wa.me/919876543210"
+                href="https://wa.me/918104778802"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 bg-emerald-600 hover:bg-emerald-500 transition-all rounded-2xl p-5 cursor-pointer group"
@@ -444,7 +444,7 @@ const Contact = () => {
                 Email us directly
               </a>{' '}
               or{' '}
-              <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" className="text-emerald-600 font-bold hover:underline">
+              <a href="https://wa.me/918104778802" target="_blank" rel="noopener noreferrer" className="text-emerald-600 font-bold hover:underline">
                 WhatsApp us
               </a>.
             </p>

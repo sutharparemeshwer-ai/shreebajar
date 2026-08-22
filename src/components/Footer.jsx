@@ -202,13 +202,18 @@ const Footer = () => {
 
             <ul className="space-y-3 sm:space-y-4">
               <li>
-                <a href="tel:+919876543210" className="flex items-start gap-2.5 sm:gap-3 group cursor-pointer">
+                <a href="https://wa.me/918104778802" target="_blank" rel="noopener noreferrer" className="flex items-start gap-2.5 sm:gap-3 group cursor-pointer">
                   <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-blue-600/20 border border-blue-500/20 flex items-center justify-center shrink-0 group-hover:bg-blue-600 transition-all">
                     <Phone className="w-3.5 h-3.5 text-blue-400 group-hover:text-white transition-colors" />
                   </div>
                   <div>
                     <div className="text-[10px] uppercase tracking-wider text-slate-500 mb-0.5">Call / WhatsApp</div>
-                    <div className="text-xs sm:text-sm font-semibold text-slate-300 group-hover:text-blue-400 transition-colors">+91 98765 43210</div>
+                    <div className="text-xs sm:text-sm font-semibold text-slate-300 group-hover:text-blue-400 transition-colors">
+                      +91 81047 78802
+                    </div>
+                    <div className="text-xs sm:text-sm font-semibold text-slate-300 group-hover:text-blue-400 transition-colors mt-0.5">
+                      +91 90797 96585
+                    </div>
                   </div>
                 </a>
               </li>
@@ -226,13 +231,15 @@ const Footer = () => {
               </li>
 
               <li>
-                <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" className="flex items-start gap-2.5 sm:gap-3 group cursor-pointer">
+                <a href="https://maps.google.com/?q=Main+Market,+Shri+Dungargarh,+Bikaner,+Rajasthan+331803" target="_blank" rel="noopener noreferrer" className="flex items-start gap-2.5 sm:gap-3 group cursor-pointer">
                   <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-blue-600/20 border border-blue-500/20 flex items-center justify-center shrink-0 group-hover:bg-blue-600 transition-all">
                     <MapPin className="w-3.5 h-3.5 text-blue-400 group-hover:text-white transition-colors" />
                   </div>
                   <div>
-                    <div className="text-[10px] uppercase tracking-wider text-slate-500 mb-0.5">Location</div>
-                    <div className="text-xs sm:text-sm font-semibold text-slate-300 group-hover:text-blue-400 transition-colors">India — Nationwide</div>
+                    <div className="text-[10px] uppercase tracking-wider text-slate-500 mb-0.5">Office & Studio</div>
+                    <div className="text-xs sm:text-sm font-semibold text-slate-300 group-hover:text-blue-400 transition-colors leading-snug">
+                      Main Market, Shri Dungargarh,<br />Bikaner, Rajasthan 331803
+                    </div>
                   </div>
                 </a>
               </li>

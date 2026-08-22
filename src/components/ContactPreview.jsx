@@ -163,7 +163,9 @@ const ContactPreview = () => {
             <div className="space-y-4 pt-2">
               {/* Phone */}
               <a
-                href="tel:+919876543210"
+                href="https://wa.me/918104778802"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center gap-4 group cursor-pointer"
               >
                 <div className="p-3 rounded-xl bg-blue-50 border border-blue-100 text-blue-600 shrink-0 group-hover:bg-blue-600 group-hover:text-white transition-all">
@@ -171,7 +173,8 @@ const ContactPreview = () => {
                 </div>
                 <div>
                   <div className="text-xs text-slate-500 font-medium">Call / WhatsApp</div>
-                  <div className="text-sm font-bold text-slate-900 group-hover:text-blue-600 transition-colors">+91 98765 43210</div>
+                  <div className="text-sm font-bold text-slate-900 group-hover:text-blue-600 transition-colors">+91 81047 78802</div>
+                  <div className="text-sm font-bold text-slate-900 group-hover:text-blue-600 transition-colors">+91 90797 96585</div>
                 </div>
               </a>
 
@@ -189,9 +192,9 @@ const ContactPreview = () => {
                 </div>
               </a>
 
-              {/* Location — now has hover effect + pointer cursor */}
+              {/* Location */}
               <a
-                href="https://maps.google.com"
+                href="https://maps.google.com/?q=Main+Market,+Shri+Dungargarh,+Bikaner,+Rajasthan+331803"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 group cursor-pointer"
@@ -200,8 +203,8 @@ const ContactPreview = () => {
                   <MapPin className="w-5 h-5" />
                 </div>
                 <div>
-                  <div className="text-xs text-slate-500 font-medium">Studio Location</div>
-                  <div className="text-sm font-bold text-slate-900 group-hover:text-blue-600 transition-colors">India — Serving Nationwide</div>
+                  <div className="text-xs text-slate-500 font-medium">Office & Studio</div>
+                  <div className="text-sm font-bold text-slate-900 group-hover:text-blue-600 transition-colors leading-snug">Main Market, Shri Dungargarh, Bikaner, Rajasthan 331803</div>
                 </div>
               </a>
             </div>
